@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+body{
+    background-color: rgb(12 91 150 / 60%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;        /*Ul n center krva*/
+    list-style-type: none;
+    background-color: black;
+    height: 60px;
+    color: aliceblue;
+}
+
+nav ul li{
+    padding:0 12px;
+
+}
+
+.brand img{
+    width: 50px;
+    padding-right: 10px;
+    padding-left: 0;
+}
+/*logo n center krva mate alg flex box banavi didhu*/
+.brand{
+    display: flex;
+    align-items: center; 
+     font-weight: bolder ;
+     font-size:1.3rem ;
+}
+
+.container{
+    min-height: 70vh; /*70% of total*/
+    background-color: black;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px 20px ;
+    background-image: url('bc5.png');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+}
+
+.bottom{
+    background-color: black;
+    color: aliceblue;
+    height: 100px;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center; /* progress bar n center krva mate aa 2 lakhyu*/
+    justify-content: center; /*width thi center thyu*/
+    flex-direction: column;/*icon nichhe lavava*/ 
+}
+
+.icons{
+    margin-top: 15px;
+    
+}
+
+.icons i{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px  ;
+}
+
+#myprogressbar{
+    min-width: 90vw;
+    cursor: pointer;
+}
+.songItemcon{
+    margin-top: 20px;
+}
+
+.songItem{
+    height: 60px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.179);
+    color: rgb(255, 255, 255);
+    width: 50%;
+    margin: 15px 0;
+    justify-content:space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.songItem img{
+    width: 50px;
+    margin: 15px 10px;
+    border-radius: 10px;
+}
+
+.time{
+    margin: 20px;
+    
+}
+
+.time i{
+    cursor: pointer;
+}
+
+
+.gif img{
+    width: 80px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.gif{
+    position: absolute;
+    left: 4.5vw;
+}
