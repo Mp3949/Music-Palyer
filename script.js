@@ -47,6 +47,20 @@ audioElement.addEventListener('timeupdate',()=>{
     //bar
     progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
     myprogressbar.value = progress;
+    if(progress==100){
+        if(songIndex>=9){
+            songIndex=0
+        }else{
+            songIndex+=1;
+        }
+        audioElement.src = `songs/${songIndex+1}.mp3`;
+            audioElement.currentTime= 0;
+            masterName.innerText=songs[songIndex].songName;
+            audioElement.play();
+            gif.style.opacity = 1;
+            masterplay.classList.remove("fa-play-circle");
+            masterplay.classList.add("fa-pause-circle");
+    }
 })
 
 myprogressbar.addEventListener('change', ()=>{
