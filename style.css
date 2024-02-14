@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 body{
-    background-color: rgb(12 91 150 / 60%);
+    background-color: rgba(0, 0, 0, 0.644);
 }
 
 *{
@@ -42,6 +42,7 @@ nav ul li{
 .container{
     min-height: 70vh; /*70% of total*/
     background-color: black;
+    box-shadow: inset 0 0 800px rgba(255, 0, 0, 0.349);
     color: antiquewhite;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px auto;
@@ -84,18 +85,50 @@ nav ul li{
 }
 .songItemcon{
     margin-top: 20px;
+    overflow: auto;
+    height:500px;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #00000036;
+  }
+  
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(21, 255, 0);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
 .songItem{
     height: 60px;
     display: flex;
     background-color: rgba(0, 0, 0, 0.179);
     color: rgb(255, 255, 255);
     width: 80%;
+    /* border-color: rgb(255, 0, 0); */
     margin: 15px 0;
     justify-content:space-between;
     align-items: center;
     border-radius: 15px;
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.208);
 }
 
 .songItem img{
@@ -123,4 +156,45 @@ nav ul li{
 .gif{
     position: absolute;
     left: 4.5vw;
+    top: 4.5vh;
 }
+
+
+
+
+/* The slider itself */
+#myprogressbar {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #292929; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  #myprogressbar:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  #myprogressbar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 30px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 10px;
+  }
+  
+  #myprogressbar::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
